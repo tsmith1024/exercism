@@ -1,0 +1,19 @@
+var _exercism$xelm$Raindrops$result = F3(
+	function (count, factor, sound) {
+		return _elm_lang$core$Native_Utils.eq(
+			A2(_elm_lang$core$Basics$rem, count, factor),
+			0) ? sound : '';
+	});
+var _exercism$xelm$Raindrops$raindrops = function (count) {
+	var allChecks = function (count) {
+		return _elm_lang$core$String$concat(
+			_elm_lang$core$Native_List.fromArray(
+				[
+					A3(_exercism$xelm$Raindrops$result, count, 3, 'Pling'),
+					A3(_exercism$xelm$Raindrops$result, count, 5, 'Plang'),
+					A3(_exercism$xelm$Raindrops$result, count, 7, 'Plong')
+				]));
+	};
+	return _elm_lang$core$String$isEmpty(
+		allChecks(count)) ? _elm_lang$core$Basics$toString(count) : allChecks(count);
+};

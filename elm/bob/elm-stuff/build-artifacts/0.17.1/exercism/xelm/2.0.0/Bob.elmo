@@ -1,0 +1,14 @@
+var _exercism$xelm$Bob$hey = function (question) {
+	return _elm_lang$core$Native_Utils.eq(
+		_elm_lang$core$String$trim(question),
+		'') ? 'Fine. Be that way!' : (A2(
+		_elm_lang$core$Regex$contains,
+		_elm_lang$core$Regex$regex('^[0-9!,.\\s]+$'),
+		question) ? 'Whatever.' : (A2(
+		_elm_lang$core$Regex$contains,
+		_elm_lang$core$Regex$regex('^([^a-z])+[^?]$'),
+		question) ? 'Whoa, chill out!' : (A2(
+		_elm_lang$core$Regex$contains,
+		_elm_lang$core$Regex$regex('^[A-Z?!,.\\s]+$'),
+		question) ? 'Whoa, chill out!' : (A2(_elm_lang$core$String$endsWith, '?', question) ? 'Sure.' : 'Whatever.'))));
+};
