@@ -1,9 +1,9 @@
 class Grains
-  def self.square(loc)
-    2**(loc - 1)
+  def self.square(location)
+    2**(location - 1)
   end
 
   def self.total
-    (1..64).to_a.reduce { |a, e| a + Grains.square(e) }
+    (2**64) - 1
   end
 end
